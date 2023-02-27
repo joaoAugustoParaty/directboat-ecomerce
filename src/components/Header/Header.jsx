@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
-import logo from "../../assets/images/eco-logo.png";
+import logo from "../../assets/images/engrenagem.png";
 import userIcon from "../../assets/images/user-icon.png";
 
 import { Container, Row } from "reactstrap";
@@ -16,8 +16,7 @@ const Header = () => {
             <div className="logo">
               <img src={logo} alt="logo" />
               <div>
-                <h1>Directboat</h1>
-                <p>Desde 1998</p>
+                <h1>Direct Boat</h1>
               </div>
             </div>
 
