@@ -2,10 +2,32 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
+//npm i framer-motion
+import {motion} from 'framer-motion';
+
 import logo from "../../assets/images/engrenagem.png";
 import userIcon from "../../assets/images/user-icon.png";
 
+//npm i reactstrap
 import { Container, Row } from "reactstrap";
+
+const nav__links = [
+    {
+        path:'inicio',
+        display: 'Inicio'
+    },
+
+    {
+        path:'shop',
+        display: 'Shop'
+    },
+
+    {
+        path:'carrinho',
+        display: 'Carrinho'
+    },
+
+]
 
 const Header = () => {
   return (
@@ -20,28 +42,29 @@ const Header = () => {
               </div>
             </div>
 
+            {/* Esse código serve para trocar o css de acordo com o click do componente do menu, pode efetuar diversos efeitos basta trocar no css o nav__active selecionado*/}
             <div className="navigation">
               <ul className="menu">
-                <li className="nav__item">
-                  <NavLink to="home">Home</NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink to="home">Shop</NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink to="home">Cart</NavLink>
-                </li>
+                {nav__links.map((item, index)=>(
+                        <li className="nav__item" key={index}>
+                            <NavLink 
+                            to={item.path} 
+                            className={(navClass)=>navClass.isActive ? "nav__active": ""}>{item.display}</NavLink>
+                        </li>
+                    ))}
               </ul>
             </div>
             <div className="nav__icons">
               <span className="fav__icon">
                 <i class="ri-heart-line"></i>
+                <span className="badge">1</span>
               </span>
               <span className="cart__icon">
                 <i class="ri-shopping-bag-line"></i>
+                <span className="badge">1</span>
               </span>
               <span>
-                <img src={userIcon} alt="" />
+                <motion.img whileTap={{scale: 1.2}} src={userIcon} alt="" />
               </span>
             </div>
             <div className="mobile__menu">
