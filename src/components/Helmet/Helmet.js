@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Helmet = () => {
+const Helmet = (props) => {
+    document.title = 'directboat -' + props.title
   return (
-    <div>Helmet</div>
+    <div className='w-100'>{props.children}</div>
   )
 }
 

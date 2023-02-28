@@ -14,16 +14,16 @@ import { Container, Row } from "reactstrap";
 const nav__links = [
     {
         path:'inicio',
-        display: 'Inicio'
+        display: 'Início'
     },
 
     {
         path:'shop',
-        display: 'Shop'
+        display: 'Compre'
     },
 
     {
-        path:'carrinho',
+        path:'Cart',
         display: 'Carrinho'
     },
 
