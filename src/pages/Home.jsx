@@ -1,11 +1,16 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
+import {motion} from 'framer-motion';
+
 import Helmet from '../components/Helmet/Helmet';
 import "../styles/home.css";
 
 import {Container, Row, Col} from "reactstrap";
 
 import heroImg from '../assets/images/motor-logo.png';
+
 
 const Home = () => {
   const year = new Date().getFullYear()
@@ -19,7 +24,7 @@ const Home = () => {
               <h2>Melhore a sua embarcação</h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda repellat voluptate repellendus, odit ducimus quas, voluptatum blanditiis nulla vero esse ratione aliquid ea reprehenderit! Obcaecati voluptatem excepturi dignissimos dolorem delectus!</p>
 
-              <button className="buy__btn">Compre agora</button>
+              <motion.button whileTap={{scale:1.2}} className="buy__btn"><Link to="/shop">Compre agora</Link></motion.button>
             </div>
           </Col>
           <Col lg='6' md='6'>
