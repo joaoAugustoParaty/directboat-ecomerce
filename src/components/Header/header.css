@@ -39,6 +39,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color);
+    text-shadow: rgb(187, 181, 181) 0.1em 0.1em 0.2em
 }
 
 .menu{
